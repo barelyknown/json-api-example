@@ -1,0 +1,37 @@
+{
+  "resource": "Players",
+  "http_method": "GET",
+  "route": "players?page[offset]=4",
+  "description": "List the second page of players",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "players?page[offset]=4",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+        "page": {
+          "offset": "4"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"229\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/229\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:12.021Z\",\"updated-at\":\"2015-07-09T21:36:12.021Z\",\"name\":\"Kid 4\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/229/relationships/matches\",\"related\":\"http://example.org/players/229/matches\"}}}}],\"meta\":{\"record-count\":5},\"links\":{\"first\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"previous\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=-5\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

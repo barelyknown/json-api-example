@@ -1,0 +1,37 @@
+{
+  "resource": "Players",
+  "http_method": "GET",
+  "route": "players?page[limit]=4",
+  "description": "List players 4 at a time",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "players?page[limit]=4",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+        "page": {
+          "limit": "4"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"216\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/216\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.956Z\",\"updated-at\":\"2015-07-09T21:36:11.956Z\",\"name\":\"Kid 0\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/216/relationships/matches\",\"related\":\"http://example.org/players/216/matches\"}}}},{\"id\":\"217\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/217\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.958Z\",\"updated-at\":\"2015-07-09T21:36:11.958Z\",\"name\":\"Kid 1\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/217/relationships/matches\",\"related\":\"http://example.org/players/217/matches\"}}}},{\"id\":\"218\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/218\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.959Z\",\"updated-at\":\"2015-07-09T21:36:11.959Z\",\"name\":\"Kid 2\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/218/relationships/matches\",\"related\":\"http://example.org/players/218/matches\"}}}},{\"id\":\"219\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/219\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.961Z\",\"updated-at\":\"2015-07-09T21:36:11.961Z\",\"name\":\"Kid 3\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/219/relationships/matches\",\"related\":\"http://example.org/players/219/matches\"}}}}],\"meta\":{\"record-count\":5},\"links\":{\"first\":\"http://example.org/players?page%5Blimit%5D=4\\u0026page%5Boffset%5D=0\",\"next\":\"http://example.org/players?page%5Blimit%5D=4\\u0026page%5Boffset%5D=4\",\"last\":\"http://example.org/players?page%5Blimit%5D=4\\u0026page%5Boffset%5D=1\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

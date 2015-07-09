@@ -1,0 +1,48 @@
+{
+  "resource": "Matches",
+  "http_method": "POST",
+  "route": "/matches",
+  "description": "Create a match",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      Should always be set to <code>matches</code>.\n"
+    },
+    {
+      "scope": "attributes",
+      "name": "scheduled-start-at",
+      "description": "      The scheduled start time.\n"
+    },
+    {
+      "scope": "relationships",
+      "name": "players",
+      "description": "      The players assigned to the match.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/matches",
+      "request_body": "{\"data\":{\"type\":\"matches\",\"attributes\":{\"scheduled-start-at\":\"2015-07-09T06:30:00.000+00:00\"},\"relationships\":{\"players\":{\"data\":[{\"id\":214,\"type\":\"players\"},{\"id\":215,\"type\":\"players\"}]}}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"121\",\"type\":\"matches\",\"links\":{\"self\":\"http://example.org/matches/121\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.933Z\",\"updated-at\":\"2015-07-09T21:36:11.933Z\",\"scheduled-start-at\":\"2015-07-09T06:30:00.000Z\"},\"relationships\":{\"players\":{\"links\":{\"self\":\"http://example.org/matches/121/relationships/players\",\"related\":\"http://example.org/matches/121/players\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

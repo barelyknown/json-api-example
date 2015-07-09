@@ -1,0 +1,74 @@
+{
+  "resources": [
+    {
+      "name": "Matches",
+      "examples": [
+        {
+          "description": "Create a match",
+          "link": "matches/create_a_match.json",
+          "groups": "all"
+        },
+        {
+          "description": "Get a match",
+          "link": "matches/get_a_match.json",
+          "groups": "all"
+        },
+        {
+          "description": "List matches",
+          "link": "matches/list_matches.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Players",
+      "examples": [
+        {
+          "description": "Create a player",
+          "link": "players/create_a_player.json",
+          "groups": "all"
+        },
+        {
+          "description": "Create a player and receive an error",
+          "link": "players/create_a_player_and_receive_an_error.json",
+          "groups": "all"
+        },
+        {
+          "description": "Get a player",
+          "link": "players/get_a_player.json",
+          "groups": "all"
+        },
+        {
+          "description": "List players",
+          "link": "players/list_players.json",
+          "groups": "all"
+        },
+        {
+          "description": "List players 4 at a time",
+          "link": "players/list_players_4_at_a_time.json",
+          "groups": "all"
+        },
+        {
+          "description": "List players and include matches",
+          "link": "players/list_players_and_include_matches.json",
+          "groups": "all"
+        },
+        {
+          "description": "List players and only fetch the updated-at attribute",
+          "link": "players/list_players_and_only_fetch_the_updated-at_attribute.json",
+          "groups": "all"
+        },
+        {
+          "description": "List players and sort by name ascending",
+          "link": "players/list_players_and_sort_by_name_ascending.json",
+          "groups": "all"
+        },
+        {
+          "description": "List the second page of players",
+          "link": "players/list_the_second_page_of_players.json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}

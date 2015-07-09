@@ -1,0 +1,38 @@
+{
+  "resource": "Players",
+  "http_method": "GET",
+  "route": "/players/:id",
+  "description": "Get a player",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "      ID of the player to be retrieved.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/players/230",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":\"230\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/230\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:12.028Z\",\"updated-at\":\"2015-07-09T21:36:12.028Z\",\"name\":\"Sean Devine\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/230/relationships/matches\",\"related\":\"http://example.org/players/230/matches\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

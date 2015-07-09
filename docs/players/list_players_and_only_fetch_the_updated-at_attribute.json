@@ -1,0 +1,37 @@
+{
+  "resource": "Players",
+  "http_method": "GET",
+  "route": "/players?fields[players]=updated-at",
+  "description": "List players and only fetch the updated-at attribute",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/players?fields[players]=updated-at",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+        "fields": {
+          "players": "updated-at"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"223\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/223\"},\"attributes\":{\"updated-at\":\"2015-07-09T21:36:12.006Z\"}},{\"id\":\"224\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/224\"},\"attributes\":{\"updated-at\":\"2015-07-09T21:36:12.007Z\"}}],\"meta\":{\"record-count\":2},\"links\":{\"first\":\"http://example.org/players?fields%5Bplayers%5D=updated-at\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?fields%5Bplayers%5D=updated-at\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=-8\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

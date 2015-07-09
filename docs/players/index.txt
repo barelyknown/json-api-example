@@ -1,0 +1,158 @@
+List players 4 at a time
+------------------------
+
+Request:
+  GET players?page[limit]=4
+  Content-Type: application/vnd.api+json
+
+  page={"limit"=>"4"}
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"216","type":"players","links":{"self":"http://example.org/players/216"},"attributes":{"created-at":"2015-07-09T21:36:11.956Z","updated-at":"2015-07-09T21:36:11.956Z","name":"Kid 0"},"relationships":{"matches":{"links":{"self":"http://example.org/players/216/relationships/matches","related":"http://example.org/players/216/matches"}}}},{"id":"217","type":"players","links":{"self":"http://example.org/players/217"},"attributes":{"created-at":"2015-07-09T21:36:11.958Z","updated-at":"2015-07-09T21:36:11.958Z","name":"Kid 1"},"relationships":{"matches":{"links":{"self":"http://example.org/players/217/relationships/matches","related":"http://example.org/players/217/matches"}}}},{"id":"218","type":"players","links":{"self":"http://example.org/players/218"},"attributes":{"created-at":"2015-07-09T21:36:11.959Z","updated-at":"2015-07-09T21:36:11.959Z","name":"Kid 2"},"relationships":{"matches":{"links":{"self":"http://example.org/players/218/relationships/matches","related":"http://example.org/players/218/matches"}}}},{"id":"219","type":"players","links":{"self":"http://example.org/players/219"},"attributes":{"created-at":"2015-07-09T21:36:11.961Z","updated-at":"2015-07-09T21:36:11.961Z","name":"Kid 3"},"relationships":{"matches":{"links":{"self":"http://example.org/players/219/relationships/matches","related":"http://example.org/players/219/matches"}}}}],"meta":{"record-count":5},"links":{"first":"http://example.org/players?page%5Blimit%5D=4\u0026page%5Boffset%5D=0","next":"http://example.org/players?page%5Blimit%5D=4\u0026page%5Boffset%5D=4","last":"http://example.org/players?page%5Blimit%5D=4\u0026page%5Boffset%5D=1"}}
+
+
+List players and include matches
+--------------------------------
+
+Request:
+  GET /players?include=matches
+  Content-Type: application/vnd.api+json
+
+  include=matches
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"221","type":"players","links":{"self":"http://example.org/players/221"},"attributes":{"created-at":"2015-07-09T21:36:11.974Z","updated-at":"2015-07-09T21:36:11.974Z","name":"Sean Devine"},"relationships":{"matches":{"links":{"self":"http://example.org/players/221/relationships/matches","related":"http://example.org/players/221/matches"},"data":[{"type":"matches","id":"124"}]}}},{"id":"222","type":"players","links":{"self":"http://example.org/players/222"},"attributes":{"created-at":"2015-07-09T21:36:11.976Z","updated-at":"2015-07-09T21:36:11.976Z","name":"Peter Coumounduros"},"relationships":{"matches":{"links":{"self":"http://example.org/players/222/relationships/matches","related":"http://example.org/players/222/matches"},"data":[{"type":"matches","id":"124"}]}}}],"included":[{"id":"124","type":"matches","links":{"self":"http://example.org/matches/124"},"attributes":{"created-at":"2015-07-09T21:36:11.978Z","updated-at":"2015-07-09T21:36:11.978Z","scheduled-start-at":"2015-07-09T16:36:04.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/124/relationships/players","related":"http://example.org/matches/124/players"}}}}],"meta":{"record-count":2},"links":{"first":"http://example.org/players?include=matches\u0026page%5Blimit%5D=10\u0026page%5Boffset%5D=0","last":"http://example.org/players?include=matches\u0026page%5Blimit%5D=10\u0026page%5Boffset%5D=-8"}}
+
+
+List players and only fetch the updated-at attribute
+----------------------------------------------------
+
+Request:
+  GET /players?fields[players]=updated-at
+  Content-Type: application/vnd.api+json
+
+  fields={"players"=>"updated-at"}
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"223","type":"players","links":{"self":"http://example.org/players/223"},"attributes":{"updated-at":"2015-07-09T21:36:12.006Z"}},{"id":"224","type":"players","links":{"self":"http://example.org/players/224"},"attributes":{"updated-at":"2015-07-09T21:36:12.007Z"}}],"meta":{"record-count":2},"links":{"first":"http://example.org/players?fields%5Bplayers%5D=updated-at\u0026page%5Blimit%5D=10\u0026page%5Boffset%5D=0","last":"http://example.org/players?fields%5Bplayers%5D=updated-at\u0026page%5Blimit%5D=10\u0026page%5Boffset%5D=-8"}}
+
+
+List the second page of players
+-------------------------------
+
+Request:
+  GET players?page[offset]=4
+  Content-Type: application/vnd.api+json
+
+  page={"offset"=>"4"}
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"229","type":"players","links":{"self":"http://example.org/players/229"},"attributes":{"created-at":"2015-07-09T21:36:12.021Z","updated-at":"2015-07-09T21:36:12.021Z","name":"Kid 4"},"relationships":{"matches":{"links":{"self":"http://example.org/players/229/relationships/matches","related":"http://example.org/players/229/matches"}}}}],"meta":{"record-count":5},"links":{"first":"http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=0","previous":"http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=0","last":"http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=-5"}}
+
+
+Get a player
+------------
+
+Parameters:
+  * id -       ID of the player to be retrieved.
+
+
+Request:
+  GET /players/230
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"230","type":"players","links":{"self":"http://example.org/players/230"},"attributes":{"created-at":"2015-07-09T21:36:12.028Z","updated-at":"2015-07-09T21:36:12.028Z","name":"Sean Devine"},"relationships":{"matches":{"links":{"self":"http://example.org/players/230/relationships/matches","related":"http://example.org/players/230/matches"}}}}}
+
+
+Create a player
+---------------
+
+Parameters:
+  * type -       Should always be set to <code>buyers</code>.
+
+  * name -       The name of the player.
+
+  * matches -       The matches that the player is assigned to.
+
+
+Request:
+  POST /players
+  Content-Type: application/vnd.api+json
+
+  {"data":{"type":"players","attributes":{"name":"Sean Devine"}}}
+
+Response:
+  Status: 201 Created
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"231","type":"players","links":{"self":"http://example.org/players/231"},"attributes":{"created-at":"2015-07-09T21:36:12.037Z","updated-at":"2015-07-09T21:36:12.037Z","name":"Sean Devine"},"relationships":{"matches":{"links":{"self":"http://example.org/players/231/relationships/matches","related":"http://example.org/players/231/matches"}}}}}
+
+
+List players and sort by name ascending
+---------------------------------------
+
+Request:
+  GET /players?sort=name
+  Content-Type: application/vnd.api+json
+
+  sort=name
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"233","type":"players","links":{"self":"http://example.org/players/233"},"attributes":{"created-at":"2015-07-09T21:36:12.044Z","updated-at":"2015-07-09T21:36:12.044Z","name":"Peter Coumounduros"},"relationships":{"matches":{"links":{"self":"http://example.org/players/233/relationships/matches","related":"http://example.org/players/233/matches"}}}},{"id":"232","type":"players","links":{"self":"http://example.org/players/232"},"attributes":{"created-at":"2015-07-09T21:36:12.042Z","updated-at":"2015-07-09T21:36:12.042Z","name":"Sean Devine"},"relationships":{"matches":{"links":{"self":"http://example.org/players/232/relationships/matches","related":"http://example.org/players/232/matches"}}}}],"meta":{"record-count":2},"links":{"first":"http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=0\u0026sort=name","last":"http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=-8\u0026sort=name"}}
+
+
+Create a player and receive an error
+------------------------------------
+
+Parameters:
+  * type -       Should always be set to <code>buyers</code>.
+
+  * name -       The name of the player.
+
+  * matches -       The matches that the player is assigned to.
+
+
+Request:
+  POST /players
+  Content-Type: application/vnd.api+json
+
+  {"data":{"type":"players","attributes":{"name":null}}}
+
+Response:
+  Status: 422 Unprocessable Entity
+  Content-Type: application/vnd.api+json
+
+  {"errors":[{"title":"name - can't be blank","detail":"can't be blank","id":null,"href":null,"code":100,"path":"/name","links":null,"status":"unprocessable_entity"}]}
+
+
+List players
+------------
+
+Request:
+  GET /players
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"234","type":"players","links":{"self":"http://example.org/players/234"},"attributes":{"created-at":"2015-07-09T21:36:12.061Z","updated-at":"2015-07-09T21:36:12.061Z","name":"Sean Devine"},"relationships":{"matches":{"links":{"self":"http://example.org/players/234/relationships/matches","related":"http://example.org/players/234/matches"}}}},{"id":"235","type":"players","links":{"self":"http://example.org/players/235"},"attributes":{"created-at":"2015-07-09T21:36:12.063Z","updated-at":"2015-07-09T21:36:12.063Z","name":"Peter Coumounduros"},"relationships":{"matches":{"links":{"self":"http://example.org/players/235/relationships/matches","related":"http://example.org/players/235/matches"}}}}],"meta":{"record-count":2},"links":{"first":"http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=0","last":"http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=-8"}}

@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+
+development:
+  <<: *default
+  database: json-api-example_development
+  host: localhost
+
+test:
+  <<: *default
+  database: json-api-example_test
+  host: localhost

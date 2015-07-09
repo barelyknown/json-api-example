@@ -1,0 +1,35 @@
+{
+  "resource": "Players",
+  "http_method": "GET",
+  "route": "/players?include=matches",
+  "description": "List players and include matches",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/players?include=matches",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+        "include": "matches"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"221\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/221\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.974Z\",\"updated-at\":\"2015-07-09T21:36:11.974Z\",\"name\":\"Sean Devine\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/221/relationships/matches\",\"related\":\"http://example.org/players/221/matches\"},\"data\":[{\"type\":\"matches\",\"id\":\"124\"}]}}},{\"id\":\"222\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/222\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.976Z\",\"updated-at\":\"2015-07-09T21:36:11.976Z\",\"name\":\"Peter Coumounduros\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/222/relationships/matches\",\"related\":\"http://example.org/players/222/matches\"},\"data\":[{\"type\":\"matches\",\"id\":\"124\"}]}}}],\"included\":[{\"id\":\"124\",\"type\":\"matches\",\"links\":{\"self\":\"http://example.org/matches/124\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.978Z\",\"updated-at\":\"2015-07-09T21:36:11.978Z\",\"scheduled-start-at\":\"2015-07-09T16:36:04.000Z\"},\"relationships\":{\"players\":{\"links\":{\"self\":\"http://example.org/matches/124/relationships/players\",\"related\":\"http://example.org/matches/124/players\"}}}}],\"meta\":{\"record-count\":2},\"links\":{\"first\":\"http://example.org/players?include=matches\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?include=matches\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=-8\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}
