@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+*.sublime-workspace
+spec/examples.txt
