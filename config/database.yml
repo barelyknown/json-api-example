@@ -2,6 +2,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 20
+  username: <%= Gem.win_platform? ? 'json-api-example' : nil %>
+  password: <%= Gem.win_platform? ? 'only_need_in_windows' : nil %>
 
 development:
   <<: *default

@@ -1,9 +1,9 @@
 GIT
-  remote: git://github.com/cerebris/jsonapi-resources.git
-  revision: b7eea8a4cd5d6df20998989306c6fdc78e959587
+  remote: https://github.com/cerebris/jsonapi-resources
+  revision: 4f2e4592efeb34d18a37fab66ba84688b087bf1a
   branch: master
   specs:
-    jsonapi-resources (0.4.4)
+    jsonapi-resources (0.5.0)
       rails (>= 4.0)
 
 GEM
@@ -44,7 +44,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    arel (6.0.0)
+    arel (6.0.2)
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -72,9 +72,11 @@ GEM
     mustache (0.99.8)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    nokogiri (1.6.6.2-x86-mingw32)
+      mini_portile (~> 0.6.0)
     pg (0.18.2)
-    puma (2.11.3)
-      rack (>= 1.1, < 2.0)
+    pg (0.18.2-x86-mingw32)
+    puma (2.12.2)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -118,15 +120,15 @@ GEM
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
       rspec-mocks (~> 3.3.0)
-    rspec-core (3.3.1)
+    rspec-core (3.3.2)
       rspec-support (~> 3.3.0)
-    rspec-expectations (3.3.0)
+    rspec-expectations (3.3.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
-    rspec-mocks (3.3.1)
+    rspec-mocks (3.3.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
-    rspec-rails (3.3.2)
+    rspec-rails (3.3.3)
       actionpack (>= 3.0, < 4.3)
       activesupport (>= 3.0, < 4.3)
       railties (>= 3.0, < 4.3)
@@ -160,9 +162,12 @@ GEM
     tilt (2.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2015.5)
+      tzinfo (>= 1.0.0)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   byebug
@@ -178,3 +183,7 @@ DEPENDENCIES
   shoulda-matchers (~> 3.0.0.rc1)
   spring
   spring-commands-rspec
+  tzinfo-data
+
+BUNDLED WITH
+   1.10.5
