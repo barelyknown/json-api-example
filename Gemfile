@@ -5,7 +5,7 @@ gem "pg"
 gem "puma"
 gem "jsonapi-resources", git: "https://github.com/cerebris/jsonapi-resources", branch: "master"
 gem "rspec_api_documentation"
-gem "raddocs"
+gem "apitome"
 gem "rspec-rails", "~> 3.3.0"
 gem "spring-commands-rspec", platform: :ruby
 
