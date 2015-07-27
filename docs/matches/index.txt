@@ -1,21 +1,3 @@
-Get a match
------------
-
-Parameters:
-  * id -       ID of the match to be retrieved.
-
-
-Request:
-  GET /matches/120
-  Content-Type: application/vnd.api+json
-
-Response:
-  Status: 200 OK
-  Content-Type: application/vnd.api+json
-
-  {"data":{"id":"120","type":"matches","links":{"self":"http://example.org/matches/120"},"attributes":{"created-at":"2015-07-09T21:36:11.855Z","updated-at":"2015-07-09T21:36:11.855Z","scheduled-start-at":"2015-07-09T16:36:04.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/120/relationships/players","related":"http://example.org/matches/120/players"}}}}}
-
-
 Create a match
 --------------
 
@@ -31,13 +13,31 @@ Request:
   POST /matches
   Content-Type: application/vnd.api+json
 
-  {"data":{"type":"matches","attributes":{"scheduled-start-at":"2015-07-09T06:30:00.000+00:00"},"relationships":{"players":{"data":[{"id":214,"type":"players"},{"id":215,"type":"players"}]}}}}
+  {"data":{"type":"matches","attributes":{"scheduled-start-at":"2015-07-09T06:30:00.000+00:00"},"relationships":{"players":{"data":[{"id":671,"type":"players"},{"id":672,"type":"players"}]}}}}
 
 Response:
   Status: 201 Created
   Content-Type: application/vnd.api+json
 
-  {"data":{"id":"121","type":"matches","links":{"self":"http://example.org/matches/121"},"attributes":{"created-at":"2015-07-09T21:36:11.933Z","updated-at":"2015-07-09T21:36:11.933Z","scheduled-start-at":"2015-07-09T06:30:00.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/121/relationships/players","related":"http://example.org/matches/121/players"}}}}}
+  {"data":{"id":"172","type":"matches","links":{"self":"http://example.org/matches/172"},"attributes":{"created-at":"2015-07-27T15:00:12.931Z","updated-at":"2015-07-27T15:00:12.931Z","scheduled-start-at":"2015-07-09T06:30:00.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/172/relationships/players","related":"http://example.org/matches/172/players"}}}}}
+
+
+Get a match
+-----------
+
+Parameters:
+  * id -       ID of the match to be retrieved.
+
+
+Request:
+  GET /matches/173
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"173","type":"matches","links":{"self":"http://example.org/matches/173"},"attributes":{"created-at":"2015-07-27T15:00:12.941Z","updated-at":"2015-07-27T15:00:12.941Z","scheduled-start-at":"2015-07-09T16:36:04.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/173/relationships/players","related":"http://example.org/matches/173/players"}}}}}
 
 
 List matches
@@ -51,6 +51,4 @@ Response:
   Status: 200 OK
   Content-Type: application/vnd.api+json
 
-  {"data":[{"id":"122","type":"matches","links":{"self":"http://example.org/matches/122"},"attributes":{"created-at":"2015-07-09T21:36:11.944Z","updated-at":"2015-07-09T21:36:11.944Z","scheduled-start-at":"2015-07-09T06:30:00.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/122/relationships/players","related":"http://example.org/matches/122/players"}}}},{"id":"123","type":"matches","links":{"self":"http://example.org/matches/123"},"attributes":{"created-at":"2015-07-09T21:36:11.946Z","updated-at":"2015-07-09T21:36:11.946Z","scheduled-start-at":"2015-07-09T07:30:00.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/123/relationships/players","related":"http://example.org/matches/123/players"}}}}],"meta":{"record-count":2},"links":{"first":"http://example.org/matches?page%5Blimit%5D=10\u0026page%5Boffset%5D=0","last":"http://example.org/matches?page%5Blimit%5D=10\u0026page%5Boffset%5D=-8"}}
-
-
+  {"data":[{"id":"174","type":"matches","links":{"self":"http://example.org/matches/174"},"attributes":{"created-at":"2015-07-27T15:00:12.948Z","updated-at":"2015-07-27T15:00:12.948Z","scheduled-start-at":"2015-07-09T06:30:00.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/174/relationships/players","related":"http://example.org/matches/174/players"}}}},{"id":"175","type":"matches","links":{"self":"http://example.org/matches/175"},"attributes":{"created-at":"2015-07-27T15:00:12.949Z","updated-at":"2015-07-27T15:00:12.949Z","scheduled-start-at":"2015-07-09T07:30:00.000Z"},"relationships":{"players":{"links":{"self":"http://example.org/matches/175/relationships/players","related":"http://example.org/matches/175/players"}}}}],"meta":{"record-count":2},"links":{"first":"http://example.org/matches?page%5Blimit%5D=10\u0026page%5Boffset%5D=0","last":"http://example.org/matches?page%5Blimit%5D=10\u0026page%5Boffset%5D=-8"}}

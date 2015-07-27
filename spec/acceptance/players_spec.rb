@@ -107,6 +107,23 @@ RSpec.resource "Players" do
     end
   end
 
+  get "/players" do
+    let! :p1 do
+      FactoryGirl.create(:player, name: "Sean Devine")
+    end
+    let! :p2 do
+      FactoryGirl.create(:player, name: "Peter Coumounduros")
+    end
+    let! :p3 do
+      FactoryGirl.create(:player, name: "Josh Smith")
+    end
+    example "List players with the id 1 or 2" do
+      do_request(filter: { id: "#{p1.id},#{p2.id}"})
+      expect(status).to eq 200
+      expect(JSON.parse(response_body)["data"].size).to eq 2
+    end
+  end
+
   get "players?page[limit]=4" do
     before do
       5.times do |n|

@@ -64,6 +64,11 @@
           "groups": "all"
         },
         {
+          "description": "List players with the id 1 or 2",
+          "link": "players/list_players_with_the_id_1_or_2.json",
+          "groups": "all"
+        },
+        {
           "description": "List the second page of players",
           "link": "players/list_the_second_page_of_players.json",
           "groups": "all"

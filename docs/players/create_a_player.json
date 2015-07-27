@@ -38,7 +38,7 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"data\":{\"id\":\"231\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/231\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:12.037Z\",\"updated-at\":\"2015-07-09T21:36:12.037Z\",\"name\":\"Sean Devine\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/231/relationships/matches\",\"related\":\"http://example.org/players/231/matches\"}}}}}",
+      "response_body": "{\"data\":{\"id\":\"660\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/660\"},\"attributes\":{\"created-at\":\"2015-07-27T15:00:12.832Z\",\"updated-at\":\"2015-07-27T15:00:12.832Z\",\"name\":\"Sean Devine\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/660/relationships/matches\",\"related\":\"http://example.org/players/660/matches\"}}}}}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json"
       },

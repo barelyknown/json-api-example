@@ -26,7 +26,7 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":[{\"id\":\"229\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/229\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:12.021Z\",\"updated-at\":\"2015-07-09T21:36:12.021Z\",\"name\":\"Kid 4\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/229/relationships/matches\",\"related\":\"http://example.org/players/229/matches\"}}}}],\"meta\":{\"record-count\":5},\"links\":{\"first\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"previous\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=-5\"}}",
+      "response_body": "{\"data\":[{\"id\":\"659\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/659\"},\"attributes\":{\"created-at\":\"2015-07-27T15:00:12.824Z\",\"updated-at\":\"2015-07-27T15:00:12.824Z\",\"name\":\"Kid 4\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/659/relationships/matches\",\"related\":\"http://example.org/players/659/matches\"}}}}],\"meta\":{\"record-count\":5},\"links\":{\"first\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"previous\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?page%5Blimit%5D=10\\u0026page%5Boffset%5D=-5\"}}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json"
       },

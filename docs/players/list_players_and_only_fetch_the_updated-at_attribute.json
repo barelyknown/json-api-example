@@ -26,7 +26,7 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":[{\"id\":\"223\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/223\"},\"attributes\":{\"updated-at\":\"2015-07-09T21:36:12.006Z\"}},{\"id\":\"224\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/224\"},\"attributes\":{\"updated-at\":\"2015-07-09T21:36:12.007Z\"}}],\"meta\":{\"record-count\":2},\"links\":{\"first\":\"http://example.org/players?fields%5Bplayers%5D=updated-at\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?fields%5Bplayers%5D=updated-at\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=-8\"}}",
+      "response_body": "{\"data\":[{\"id\":\"650\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/650\"},\"attributes\":{\"updated-at\":\"2015-07-27T15:00:12.792Z\"}},{\"id\":\"651\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/651\"},\"attributes\":{\"updated-at\":\"2015-07-27T15:00:12.793Z\"}}],\"meta\":{\"record-count\":2},\"links\":{\"first\":\"http://example.org/players?fields%5Bplayers%5D=updated-at\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?fields%5Bplayers%5D=updated-at\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=-8\"}}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json"
       },

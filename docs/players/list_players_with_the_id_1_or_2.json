@@ -1,0 +1,37 @@
+{
+  "resource": "Players",
+  "http_method": "GET",
+  "route": "/players",
+  "description": "List players with the id 1 or 2",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/players?filter[id]=668%2C669",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+        "filter": {
+          "id": "668,669"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"668\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/668\"},\"attributes\":{\"created-at\":\"2015-07-27T15:00:12.901Z\",\"updated-at\":\"2015-07-27T15:00:12.901Z\",\"name\":\"Sean Devine\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/668/relationships/matches\",\"related\":\"http://example.org/players/668/matches\"}}}},{\"id\":\"669\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/players/669\"},\"attributes\":{\"created-at\":\"2015-07-27T15:00:12.903Z\",\"updated-at\":\"2015-07-27T15:00:12.903Z\",\"name\":\"Peter Coumounduros\"},\"relationships\":{\"matches\":{\"links\":{\"self\":\"http://example.org/players/669/relationships/matches\",\"related\":\"http://example.org/players/669/matches\"}}}}],\"meta\":{\"record-count\":2},\"links\":{\"first\":\"http://example.org/players?filter%5Bid%5D=668%2C669\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=0\",\"last\":\"http://example.org/players?filter%5Bid%5D=668%2C669\\u0026page%5Blimit%5D=10\\u0026page%5Boffset%5D=-8\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

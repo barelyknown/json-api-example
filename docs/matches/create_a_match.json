@@ -28,7 +28,7 @@
     {
       "request_method": "POST",
       "request_path": "/matches",
-      "request_body": "{\"data\":{\"type\":\"matches\",\"attributes\":{\"scheduled-start-at\":\"2015-07-09T06:30:00.000+00:00\"},\"relationships\":{\"players\":{\"data\":[{\"id\":214,\"type\":\"players\"},{\"id\":215,\"type\":\"players\"}]}}}}",
+      "request_body": "{\"data\":{\"type\":\"matches\",\"attributes\":{\"scheduled-start-at\":\"2015-07-09T06:30:00.000+00:00\"},\"relationships\":{\"players\":{\"data\":[{\"id\":671,\"type\":\"players\"},{\"id\":672,\"type\":\"players\"}]}}}}",
       "request_headers": {
         "Content-Type": "application/vnd.api+json"
       },
@@ -37,7 +37,7 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"data\":{\"id\":\"121\",\"type\":\"matches\",\"links\":{\"self\":\"http://example.org/matches/121\"},\"attributes\":{\"created-at\":\"2015-07-09T21:36:11.933Z\",\"updated-at\":\"2015-07-09T21:36:11.933Z\",\"scheduled-start-at\":\"2015-07-09T06:30:00.000Z\"},\"relationships\":{\"players\":{\"links\":{\"self\":\"http://example.org/matches/121/relationships/players\",\"related\":\"http://example.org/matches/121/players\"}}}}}",
+      "response_body": "{\"data\":{\"id\":\"172\",\"type\":\"matches\",\"links\":{\"self\":\"http://example.org/matches/172\"},\"attributes\":{\"created-at\":\"2015-07-27T15:00:12.931Z\",\"updated-at\":\"2015-07-27T15:00:12.931Z\",\"scheduled-start-at\":\"2015-07-09T06:30:00.000Z\"},\"relationships\":{\"players\":{\"links\":{\"self\":\"http://example.org/matches/172/relationships/players\",\"related\":\"http://example.org/matches/172/players\"}}}}}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json"
       },

@@ -38,7 +38,7 @@
       "request_content_type": "application/vnd.api+json",
       "response_status": 422,
       "response_status_text": "Unprocessable Entity",
-      "response_body": "{\"errors\":[{\"title\":\"name - can't be blank\",\"detail\":\"can't be blank\",\"id\":null,\"href\":null,\"code\":100,\"path\":\"/name\",\"links\":null,\"status\":\"unprocessable_entity\"}]}",
+      "response_body": "{\"errors\":[{\"title\":\"name - can't be blank\",\"detail\":\"can't be blank\",\"id\":null,\"href\":null,\"code\":100,\"source\":{\"pointer\":\"/data/attributes/name\"},\"links\":null,\"status\":\"unprocessable_entity\"}]}",
       "response_headers": {
         "Content-Type": "application/vnd.api+json"
       },

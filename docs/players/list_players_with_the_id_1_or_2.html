@@ -109,8 +109,8 @@ table th, table td {
       <h1>Players API</h1>
 
       <div class="article">
-        <h2>List the second page of players</h2>
-        <h3>GET players?page[offset]=4</h3>
+        <h2>List players with the id 1 or 2</h2>
+        <h3>GET /players</h3>
 
 
 
@@ -120,10 +120,10 @@ table th, table td {
             <pre class="request headers">Content-Type: application/vnd.api+json</pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET players?page[offset]=4</pre>
+          <pre class="request route highlight">GET /players?filter[id]=668%2C669</pre>
 
             <h4>Query Parameters</h4>
-            <pre class="request query_parameters highlight">page: {&quot;offset&quot;=&gt;&quot;4&quot;}</pre>
+            <pre class="request query_parameters highlight">filter: {&quot;id&quot;=&gt;&quot;668,669&quot;}</pre>
 
 
 
@@ -133,7 +133,7 @@ table th, table td {
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
-              <pre class="response body">{&quot;data&quot;:[{&quot;id&quot;:&quot;659&quot;,&quot;type&quot;:&quot;players&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/players/659&quot;},&quot;attributes&quot;:{&quot;created-at&quot;:&quot;2015-07-27T15:00:12.824Z&quot;,&quot;updated-at&quot;:&quot;2015-07-27T15:00:12.824Z&quot;,&quot;name&quot;:&quot;Kid 4&quot;},&quot;relationships&quot;:{&quot;matches&quot;:{&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/players/659/relationships/matches&quot;,&quot;related&quot;:&quot;http://example.org/players/659/matches&quot;}}}}],&quot;meta&quot;:{&quot;record-count&quot;:5},&quot;links&quot;:{&quot;first&quot;:&quot;http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=0&quot;,&quot;previous&quot;:&quot;http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=0&quot;,&quot;last&quot;:&quot;http://example.org/players?page%5Blimit%5D=10\u0026page%5Boffset%5D=-5&quot;}}</pre>
+              <pre class="response body">{&quot;data&quot;:[{&quot;id&quot;:&quot;668&quot;,&quot;type&quot;:&quot;players&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/players/668&quot;},&quot;attributes&quot;:{&quot;created-at&quot;:&quot;2015-07-27T15:00:12.901Z&quot;,&quot;updated-at&quot;:&quot;2015-07-27T15:00:12.901Z&quot;,&quot;name&quot;:&quot;Sean Devine&quot;},&quot;relationships&quot;:{&quot;matches&quot;:{&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/players/668/relationships/matches&quot;,&quot;related&quot;:&quot;http://example.org/players/668/matches&quot;}}}},{&quot;id&quot;:&quot;669&quot;,&quot;type&quot;:&quot;players&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/players/669&quot;},&quot;attributes&quot;:{&quot;created-at&quot;:&quot;2015-07-27T15:00:12.903Z&quot;,&quot;updated-at&quot;:&quot;2015-07-27T15:00:12.903Z&quot;,&quot;name&quot;:&quot;Peter Coumounduros&quot;},&quot;relationships&quot;:{&quot;matches&quot;:{&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/players/669/relationships/matches&quot;,&quot;related&quot;:&quot;http://example.org/players/669/matches&quot;}}}}],&quot;meta&quot;:{&quot;record-count&quot;:2},&quot;links&quot;:{&quot;first&quot;:&quot;http://example.org/players?filter%5Bid%5D=668%2C669\u0026page%5Blimit%5D=10\u0026page%5Boffset%5D=0&quot;,&quot;last&quot;:&quot;http://example.org/players?filter%5Bid%5D=668%2C669\u0026page%5Blimit%5D=10\u0026page%5Boffset%5D=-8&quot;}}</pre>
       </div>
     </div>
   </body>
