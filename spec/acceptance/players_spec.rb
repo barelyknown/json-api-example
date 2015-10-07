@@ -3,7 +3,8 @@ require "api_documentation_helper"
 RSpec.resource "Players" do
   header "Content-Type", "application/vnd.api+json"
 
-  post "/players" do
+  shared_context :players_parameters_description do
+
     parameter :type, <<-DESC, required: true
       Should always be set to <code>buyers</code>.
     DESC
@@ -15,6 +16,12 @@ RSpec.resource "Players" do
     parameter :matches, <<-DESC, scope: :relationships
       The matches that the player is assigned to.
     DESC
+
+  end
+
+  post "/players" do
+
+    include_context :players_parameters_description
 
     let(:type) { :players }
 
@@ -26,17 +33,8 @@ RSpec.resource "Players" do
   end
 
   post "/players" do
-    parameter :type, <<-DESC, required: true
-      Should always be set to <code>buyers</code>.
-    DESC
 
-    parameter :name, <<-DESC, scope: :attributes, require: true
-      The name of the player.
-    DESC
-
-    parameter :matches, <<-DESC, scope: :relationships
-      The matches that the player is assigned to.
-    DESC
+    include_context :players_parameters_description
 
     let(:type) { :players }
 
